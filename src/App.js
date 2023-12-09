@@ -8,6 +8,8 @@ import Bookappoinment from "./component/Bookappoinment";
 import AppointmentPopup from "./component/AppointmentPopup ";
 import AnimationPad from "./component/AnimationPad";
 import NewCelender from "./component/NewCelender";
+import MeetLink from "./component/MeetLink";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
   return (
@@ -18,9 +20,12 @@ function App() {
       {/* <Celender /> */}
       {/* <MuiCelender/> */}
       {/* <Bookappoinment /> */}
-      <AppointmentPopup/>
+      {/* <AppointmentPopup /> */}
       {/* <NewCelender /> */}
       {/* <AnimationPad /> */}
+      <GoogleOAuthProvider clientId="776255482410-84ffn8g469b4v5mnfd6tltd0rlklm0or.apps.googleusercontent.com">
+        <MeetLink />
+      </GoogleOAuthProvider>
     </>
   );
 }

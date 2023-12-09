@@ -4,6 +4,55 @@
   z-index: 1200;
 }
 
+.MuiDialogTitle-root + .css-ypiqx9-MuiDialogContent-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.css-8t49rw-MuiStepConnector-line {
+  border-left-style: dashed !important;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  max-width: 1300px !important;
+  width: 100%;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #a4c89a !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: #a4c89a !important;
+}
+.stap_main {
+  background: #024638;
+  height: 70vh;
+  padding: 10px 20px;
+}
+.stap_main img{
+  margin: 30px 0px;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #fff !important;
+}
+.css-117w1su-MuiStepIcon-text {
+  fill: #024638 !important;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  position: relative;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+  position: absolute;
+  right: 60%;
+}
+.MuiDialogTitle-root + .css-ypiqx9-MuiDialogContent-root {
+  padding: 0;
+}
+.mainBtn {
+  width: 60%;
+  margin-bottom: 60px;
+}
+.virtualBtn{
+  margin: 0px 35% 0px 0px !important;
+}
 .MDetail {
   position: fixed;
   display: flex;
@@ -17,22 +66,24 @@
   z-index: -1;
 }
 
-.sectionOne, .sectionTwo, .sectionThree{
+.sectionOne,
+.sectionTwo,
+.sectionThree {
   width: 100%;
   background-color: gray;
   height: 100vh;
   margin-bottom: 20px;
 }
-.sectionTwo{
+.sectionTwo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.secondImage{
+.secondImage {
   z-index: 1;
 }
-.firstImges{
+.firstImges {
   z-index: 9;
 }
 

@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import "../App.css";
 
 const AppointmentPopup = () => {
   const [open, setOpen] = useState(false);
@@ -27,17 +28,17 @@ const AppointmentPopup = () => {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    setActiveStep(1); 
+    setActiveStep(1);
   };
 
   const handleNextClick = () => {
     if (activeStep === 1) {
-      setActiveStep(2); 
-      if (selectedOption === 'Virtual Meeting') {
+      setActiveStep(2);
+      if (selectedOption === "Virtual Meeting") {
         setShowSubmitPopup(true);
       }
     } else {
-      console.log('Selected Option:', selectedOption);
+      console.log("Selected Option:", selectedOption);
       handleClose();
     }
   };
@@ -48,24 +49,36 @@ const AppointmentPopup = () => {
         Book Appointment
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>{selectedOption ? `Book ${selectedOption} Appointment` : 'Book Appointment'}</DialogTitle>
+        <DialogTitle>
+          {selectedOption ? `Book Appointment` : "Book Appointment"}
+        </DialogTitle>
         <DialogContent>
-          <Stepper activeStep={activeStep} orientation="vertical">
-            <Step>
-              <StepLabel>Select Appointment Type</StepLabel>
-            </Step>
-            <Step>
-              <StepLabel>Enter Details</StepLabel>
-            </Step>
-            <Step>
-              <StepLabel>Submit Appointment</StepLabel>
-            </Step>
-          </Stepper>
+          <div className="stap_main">
+            <img src="https://d1tmxmmhy79644.cloudfront.net/Header/logo.svg"/>
+            <Stepper activeStep={activeStep} orientation="vertical">
+              <Step>
+                <StepLabel>Select Appointment Type</StepLabel>
+              </Step>
+              <Step>
+                <StepLabel>Enter Details</StepLabel>
+              </Step>
+              <Step>
+                <StepLabel>Submit Appointment</StepLabel>
+              </Step>
+            </Stepper>
+          </div>
           {!selectedOption && (
-            <>
-              <Button onClick={() => handleOptionClick('Virtual Meeting')}>Virtual Meeting</Button>
-              <Button onClick={() => handleOptionClick('In-store')}>In-store</Button>
-            </>
+            <div className="mainBtn">
+              <Button
+                onClick={() => handleOptionClick("Virtual Meeting")}
+                className="virtualBtn"
+              >
+                Virtual Meeting
+              </Button>
+              <a href="https://blgdlab.com/book-appointment">
+                <Button className="instoreBtn">In-store</Button>
+              </a>
+            </div>
           )}
           {selectedOption && !showSubmitPopup && (
             <div>
@@ -78,11 +91,11 @@ const AppointmentPopup = () => {
             </div>
           )}
         </DialogContent>
-        <DialogActions>
+        {/* <DialogActions>
           <Button onClick={handleClose} color="primary">
             Close
           </Button>
-        </DialogActions>
+        </DialogActions> */}
       </Dialog>
     </div>
   );

@@ -3,7 +3,19 @@
   inset: 0px;
   z-index: 1200;
 }
-
+.secLable {
+  color: #b5b5c3;
+  font-size: 12px;
+  font-weight: 500;
+}
+.firstLabel {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.css-14sza3e-MuiStepLabel-root {
+  padding: 0 !important;
+}
 .MuiDialogTitle-root + .css-ypiqx9-MuiDialogContent-root {
   display: flex;
   justify-content: space-between;
@@ -11,9 +23,10 @@
 }
 .css-8t49rw-MuiStepConnector-line {
   border-left-style: dashed !important;
+  min-height: 24px !important;
 }
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  max-width: 1300px !important;
+  max-width: 1400px !important;
   width: 100%;
 }
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
@@ -24,17 +37,28 @@
 }
 .stap_main {
   background: #024638;
-  height: 70vh;
+  height: 80vh;
   padding: 10px 20px;
 }
-.stap_main img{
+.css-vnkopk-MuiStepLabel-iconContainer {
+  padding-right: 20px !important;
+}
+.css-1pe7n21-MuiStepConnector-root {
+  margin-left: 18px !important;
+}
+.stap_main img {
   margin: 30px 0px;
 }
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  width: 1.5em !important;
+  height: 2em !important;
   color: #fff !important;
 }
 .css-117w1su-MuiStepIcon-text {
   fill: #024638 !important;
+}
+.css-ypiqx9-MuiDialogContent-root {
+  padding: 0px !important;
 }
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   position: relative;
@@ -47,11 +71,134 @@
   padding: 0;
 }
 .mainBtn {
-  width: 60%;
-  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
 }
-.virtualBtn{
-  margin: 0px 35% 0px 0px !important;
+.firtImg,
+.Second-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+}
+.firtImg {
+  position: relative;
+}
+.firtImg h3,
+.Second-img h3 {
+  color: #024638;
+  font-size: 28px;
+  font-weight: 500;
+}
+.firtImg p,
+.Second-img p {
+  color: #b5b5c3;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.virtualBtn,
+.instoreBtn {
+  width: 307px;
+  height: 52px;
+  background-color: #024638;
+}
+.firtImg::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 360px;
+  background-color: #bcbcbc;
+  right: -10%;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  background-color: #024638 !important;
+  color: #fff !important;
+  margin-top: 20px !important;
+  float: inline-end;
+  /* margin-right: 50px !important;
+  margin-bottom: 10px !important; */
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #024638 !important;
+  color: #fff;
+}
+.next_button {
+  width: 177px;
+  border-radius: 0px !important;
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  margin: 0 !important;
+  padding: 14px 0px !important;
+}
+.BookClose h2 {
+  color: #024638;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-completed {
+  color: #fff !important;
+}
+.main_detail {
+  background-color: #f9f9f9;
+  width: 90%;
+  /* height: 20%; */
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.Time {
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.Date {
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.Contry {
+  display: inline-flex;
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.second-right-side {
+  width: 100%;
+}
+.backtobook {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.backtobook p {
+  color: #024638;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+
+.right-side {
+  width: 100%;
+  position: relative;
+}
+#country {
+  background: #f9f9f9;
+  width: 440px;
+  max-width: 100%;
+  border-radius: 2px;
 }
 .MDetail {
   position: fixed;
@@ -86,6 +233,15 @@
 .firstImges {
   z-index: 9;
 }
+.BookClose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 15px;
+  width: 77%;
+  margin-left: 20px;
+}
 
 .App {
   text-align: center;
@@ -112,6 +268,84 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* custome input start */
+
+.select-field {
+  width: 440px;
+  max-width: 100%;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23024638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
+    no-repeat;
+  background-position: right 10px center;
+  background-size: 40px;
+  outline: none;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+.select-box p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-select {
+  position: relative;
+}
+.main-select::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background-color: #bcbcbc;
+  bottom: -20px;
+}
+.muicelender {
+  position: relative;
+  display: flex;
+}
+.muicelender::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  top: 30px;
+  right: 49%;
+  background-color: #bcbcbc;
+}
+.location {
+  margin: 50px 50px 50px 50px;
+  position: relative;
+}
+.location::before {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #bcbcbc;
+  top: 100px;
+}
+.clickableDiv {
+  /* cursor: pointer; */
+}
+.timing-button {
+  border: 1px solid #a4c89a;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.active {
+  background-color: #024638;
+  color: #fff; /* Adjust the active state styling as needed */
+}
+/* .select-box::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: red;
+} */
+/* custome input End */
 
 .App-link {
   color: #61dafb;
@@ -200,6 +434,18 @@
 .react-calendar--doubleView .react-calendar__viewContainer > * {
   width: 50%;
   margin: 0.5em;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-active {
+  color: #fff !important;
+}
+.virtualImages {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  color: #fff;
+  width: 200px;
 }
 .react-calendar,
 .react-calendar *,
@@ -331,4 +577,40 @@
 .react-calendar__navigation .react-calendar__navigation__next2-button {
   position: absolute;
   right: 0;
+}
+
+.contact-email {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  width: 88%;
+  margin-left: 70px;
+
+  div {
+    width: 100%;
+  }
+}
+.form-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.form-control {
+  font-size: 20px;
+  padding: 2px 0px 10px 27px ;
+  font-weight: 400;
+  line-height: 34px;
+  border-bottom: 0.6px solid #bdbdbd;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+.Last_submit{
+  border-radius: 0px !important;
+  padding: 10px 60px !important;
+  margin-right: 50px !important;
 }

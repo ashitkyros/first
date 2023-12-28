@@ -11,6 +11,8 @@ import NewCelender from "./component/NewCelender";
 import MeetLink from "./component/MeetLink";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Crudopration from "./component/Crudopration";
+import Newtry from "./component/Newtry";
+import MeetSchedulerComponent from "./container/Google/MeetSchedulerComponent";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <MeetLink />
       </GoogleOAuthProvider> */}
       {/* <Crudopration/> */}
+      {/* <Newtry /> */}
+      {/* <MeetSchedulerComponent /> */}
     </>
   );
 }
